@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System | Word Alive Church</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/system.css">
+  <style>
+    .ds-swatches { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    .ds-swatch { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper); }
+    .ds-swatch div { height: 88px; }
+    .ds-swatch p { padding: var(--space-3); font-size: var(--step--1); margin: 0; line-height: 1.4; }
+    .ds-swatch code { color: var(--ink-soft); }
+    .ds-type > * + * { margin-top: var(--space-5); }
+    .ds-label { font-size: var(--step--1); color: var(--ink-faint); font-family: var(--font-text); letter-spacing: .04em; display: block; margin-bottom: var(--space-2); }
+    .ds-block { padding-block: var(--space-8); border-top: 1px solid var(--line); }
+    .ds-block > h2 { font-size: var(--step-2); margin-bottom: var(--space-6); }
+  </style>
+</head>
+<body>
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Word Alive / Lời Sống</p>
+    <h1 class="display">Design system</h1>
+    <p class="lede">The tokens and components behind the church site. Everything here lives in <code>assets/css/system.css</code>.</p>
+    <div class="btn-row"><a class="btn btn--ghost" href="index.html">Open the site</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="ds-block">
+    <h2>Principles</h2>
+    <div class="prose">
+      <p><strong>Warm and colorful.</strong> The palette comes from the church itself: the plaster wall in the portraits, terracotta, morning gold, and deep green. Whole sections take a color so the page has rhythm as you scroll.</p>
+      <p><strong>Two languages, equal weight.</strong> Both fonts were chosen because they render Vietnamese diacritics properly. English and Vietnamese pages share every component.</p>
+      <p><strong>Photos of real people.</strong> Use photos from church life instead of stock images. Portraits are cropped 4:5, scenes 16:9 or 3:2.</p>
+      <p><strong>Plain words.</strong> Write the way a pastor would talk to a visitor at the door. Headings don't end in periods. Labels are short italics, never spaced-out capitals.</p>
+    </div>
+  </section>
+
+  <section class="ds-block">
+    <h2>Color</h2>
+    <p class="prose" style="margin-bottom:var(--space-6)">Sections alternate between light (paper, stone, sun) and dark (forest, clay, forest deep). On dark sections, text turns cream and accents turn gold. Section classes: <code>.section--stone</code>, <code>--sun</code>, <code>--sky</code>, <code>--forest</code>, <code>--clay</code>, <code>--dark</code>.</p>
+    <div class="ds-swatches">
+      <div class="ds-swatch"><div style="background:var(--paper)"></div><p>Paper<br><code>--paper #f6f0e4</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--paper-2)"></div><p>Stone<br><code>--paper-2 #ede3d0</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--ink)"></div><p>Ink<br><code>--ink #1a1612</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--ink-soft)"></div><p>Ink soft<br><code>--ink-soft #443c33</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--forest)"></div><p>Forest<br><code>--forest #284d38</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--forest-deep)"></div><p>Forest deep<br><code>--forest-deep #16291e</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--forest-soft)"></div><p>Forest soft<br><code>--forest-soft #d7e2d3</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--clay)"></div><p>Clay<br><code>--clay #a8461f</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--clay-soft)"></div><p>Clay soft<br><code>--clay-soft #f0d2bf</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--sun)"></div><p>Sun<br><code>--sun #e2a93b</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--sun-soft)"></div><p>Sun soft<br><code>--sun-soft #f6e3b4</code></p></div>
+      <div class="ds-swatch"><div style="background:var(--sky)"></div><p>Sky<br><code>--sky #c9dbe0</code></p></div>
+    </div>
+  </section>
+
+  <section class="ds-block">
+    <h2>Type</h2>
+    <div class="split">
+      <div class="prose">
+        <p><strong>EB Garamond</strong> for headings, labels, quotes, and Scripture. It's a Garamond in the tradition of printed Bibles and hymnals, and its italic carries every label on the site.</p>
+        <p><strong>Literata</strong> for reading text and buttons. A book serif made for long reading on screens, with full Vietnamese support so stacked marks like ộ and ữ stay clear.</p>
+      </div>
+      <div class="ds-type">
+        <div><span class="ds-label">display / step-5</span><p class="display" style="font-family:var(--font-display);margin:0">Lời Sống</p></div>
+        <div><span class="ds-label">h1 / step-4</span><p class="h1" style="font-family:var(--font-display);margin:0">Gặp gỡ quý mục sư</p></div>
+        <div><span class="ds-label">h2 / step-3</span><p class="h2" style="font-family:var(--font-display);margin:0">Meet our pastors</p></div>
+        <div><span class="ds-label">h3 / step-2</span><p class="h3" style="font-family:var(--font-display);margin:0">Nguyễn Như Bằng Hữu</p></div>
+        <div><span class="ds-label">lede / step-1</span><p class="lede" style="margin:0">Hội thánh chúng tôi yêu mến những thì giờ tôn vinh và thờ phượng Vua Giê-xu.</p></div>
+        <div><span class="ds-label">body / step-0</span><p style="margin:0">We love spending time praising and worshiping our King Jesus, praying, studying the Word, and growing together.</p></div>
+        <div><span class="ds-label">eyebrow</span><p class="eyebrow" style="margin:0">Sunday worship</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-block">
+    <h2>Buttons &amp; links</h2>
+    <div class="btn-row" style="margin-top:0">
+      <a class="btn" href="#">Get directions</a>
+      <a class="btn btn--ghost" href="#">Call us</a>
+      <a class="arrow-link" href="#" style="align-self:center">Plan a visit</a>
+    </div>
+    <div class="section--dark" style="padding:var(--space-6);margin-top:var(--space-5);border-radius:var(--radius)">
+      <div class="btn-row" style="margin-top:0"><a class="btn" href="#">Give online</a><a class="arrow-link" href="#" style="align-self:center">On dark</a></div>
+    </div>
+    <div style="margin-top:var(--space-5)">
+      <span class="ds-label">Language switch</span>
+      <div class="lang-switch"><a href="#" aria-current="true">EN</a><a href="#">VI</a></div>
+    </div>
+  </section>
+
+  <section class="ds-block">
+    <h2>Service time</h2>
+    <div style="max-width:360px">
+      <div class="service">
+        <span class="service__label">Sunday worship</span>
+        <span class="service__time">11:00<small>AM</small></span>
+        <span class="service__where">11711 Trask Ave, Garden Grove</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-block">
+    <h2>Mandate</h2>
+    <ol class="mandate">
+      <li><span class="mandate__num">i.</span><span class="mandate__word">Reach</span><span class="mandate__alt">Cứu người</span></li>
+      <li><span class="mandate__num">ii.</span><span class="mandate__word">Disciple</span><span class="mandate__alt">Đào tạo</span></li>
+      <li><span class="mandate__num">iii.</span><span class="mandate__word">Serve</span><span class="mandate__alt">Phục vụ</span></li>
+      <li><span class="mandate__num">iv.</span><span class="mandate__word">Build</span><span class="mandate__alt">Xây dựng</span></li>
+    </ol>
+  </section>
+
+  <section class="ds-block">
+    <h2>Scripture</h2>
+    <blockquote class="scripture"><p>"Go and make disciples of all nations."</p><cite>Matthew 28:19</cite></blockquote>
+  </section>
+
+  <section class="ds-block">
+    <h2>Person</h2>
+    <article class="person">
+      <div class="person__photo"><img src="assets/img/andy.jpg" alt="Pastor Andy Le"></div>
+      <div class="person__bio">
+        <p class="person__role">Pastor</p>
+        <h3 class="person__name">Andy Le</h3>
+        <p class="person__alt">Husband to Pastor Regina Bui Le</p>
+        <p>Short bio, two paragraphs max before the fold. The rest goes inside "Read more".</p>
+        <details><summary>Read more</summary><p>Expanded text.</p></details>
+        <p class="todo" style="margin-top:var(--space-4)">Draft marker. Shows where content is still missing. Remove before launch.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="ds-block">
+    <h2>List rows</h2>
+    <ul class="list-rows">
+      <li><div class="row"><h3>ABOVE</h3><p>Youth and young adults. Friday night Bible study.</p><span class="meta">Fridays, 7:30pm</span></div></li>
+      <li><a href="#"><h3>Sermons</h3><p>Linked row with hover state.</p><span class="meta">YouTube →</span></a></li>
+    </ul>
+  </section>
+
+  <section class="ds-block">
+    <h2>Statement list</h2>
+    <ol class="faith-list" style="max-width:760px">
+      <li><p>The Bible is the only inspired, infallible, and authoritative Word of God.</p><span class="ref">2 Tim. 3:16-17</span></li>
+      <li><p>The body of Christ consists of all believers in Jesus Christ.</p><span class="ref">1 Cor. 12:12-13</span></li>
+    </ol>
+  </section>
+
+  <section class="ds-block">
+    <h2>Map</h2>
+    <div class="map" style="height:320px">
+      <iframe title="Map of Word Alive Church" src="https://maps.google.com/maps?q=11711%20Trask%20Ave%2C%20Garden%20Grove%2C%20CA%2092843&z=15&output=embed" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section class="ds-block">
+    <h2>Ministry panel</h2>
+    <div class="section--sky" style="padding:var(--space-6);border-radius:var(--radius)">
+      <div class="ministry-grid">
+        <article class="ministry"><h3>Youth</h3><p class="ministry__who">High school and college</p><p class="ministry__when">Fridays, 6:30pm<small>Home groups every Friday night</small></p><div class="btn-row" style="margin-top:0"><a class="btn" href="#">Get connected</a></div></article>
+        <article class="ministry"><h3>Young adults</h3><p class="ministry__who">20s and early 30s</p><p class="ministry__when">6:30pm</p><p class="status">On break until February</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-block">
+    <h2>Photo placeholder &amp; video</h2>
+    <div class="split split--even">
+      <div style="max-width:280px"><div class="photo-pending"><span>Photo coming soon</span></div></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/4WbbX7j57pE" title="Impact Connection | Summer Camp 2025" allowfullscreen loading="lazy"></iframe></div>
+    </div>
+  </section>
+
+  <section class="ds-block">
+    <h2>Spacing</h2>
+    <div style="display:grid;gap:var(--space-3)">
+      <div style="display:flex;align-items:center;gap:var(--space-4)"><span class="ds-label" style="width:90px;margin:0">space-4</span><span style="height:12px;width:var(--space-4);background:var(--clay)"></span></div>
+      <div style="display:flex;align-items:center;gap:var(--space-4)"><span class="ds-label" style="width:90px;margin:0">space-5</span><span style="height:12px;width:var(--space-5);background:var(--clay)"></span></div>
+      <div style="display:flex;align-items:center;gap:var(--space-4)"><span class="ds-label" style="width:90px;margin:0">space-6</span><span style="height:12px;width:var(--space-6);background:var(--clay)"></span></div>
+      <div style="display:flex;align-items:center;gap:var(--space-4)"><span class="ds-label" style="width:90px;margin:0">space-7</span><span style="height:12px;width:var(--space-7);background:var(--clay)"></span></div>
+      <div style="display:flex;align-items:center;gap:var(--space-4)"><span class="ds-label" style="width:90px;margin:0">space-8</span><span style="height:12px;width:var(--space-8);background:var(--clay)"></span></div>
+      <div style="display:flex;align-items:center;gap:var(--space-4)"><span class="ds-label" style="width:90px;margin:0">space-9</span><span style="height:12px;width:var(--space-9);background:var(--clay)"></span></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
