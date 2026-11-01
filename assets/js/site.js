@@ -61,6 +61,21 @@ document.querySelectorAll("[data-sermon]").forEach((figure) => {
   setInterval(() => document.visibilityState === "visible" && load(), 10 * 60 * 1000);
 });
 
+// Contact form: FormSubmit needs an absolute URL for the thank-you page,
+// so build it from wherever the site is hosted.
+document.querySelectorAll("[data-contact-form]").forEach((form) => {
+  const next = form.querySelector("[data-next]");
+  if (next) next.value = new URL(next.dataset.next, location.href).href;
+});
+
+// Links like "Get connected" jump to the form with the right topic picked
+document.querySelectorAll("[data-topic]").forEach((link) =>
+  link.addEventListener("click", () => {
+    const select = document.querySelector("#c-topic");
+    if (select) select.value = link.dataset.topic;
+  })
+);
+
 // Remember the chosen language so the landing page can point to it next time
 document.querySelectorAll("[data-lang-choice]").forEach((link) =>
   link.addEventListener("click", () => {

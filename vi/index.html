@@ -28,6 +28,7 @@
         <li><a href="#watch">Xem</a></li>
         <li><a href="beliefs.html">Niềm tin</a></li>
         <li><a href="#give">Dâng hiến</a></li>
+        <li><a href="#contact">Liên lạc</a></li>
       </ul>
       <div class="lang-switch" role="group" aria-label="Ngôn ngữ">
         <a href="../en/" lang="en" data-lang-choice="en">EN</a>
@@ -230,7 +231,7 @@
           <p class="ministry__when">Thứ Sáu, 6:30 tối<small>Nhóm tại gia mỗi tối thứ Sáu</small></p>
           <p class="status">Tạm nghỉ đến tháng Hai</p>
           <p>Xin liên lạc với chúng tôi để được kết nối với một nhóm tại gia.</p>
-          <div class="btn-row" style="margin-top:var(--space-2)"><a class="btn" href="mailto:walschurch@gmail.com?subject=Youth%20home%20groups">Kết nối</a></div>
+          <div class="btn-row" style="margin-top:var(--space-2)"><a class="btn" href="#contact" data-topic="Nhóm tại gia thiếu niên">Kết nối</a></div>
         </article>
         <article class="ministry">
           <h3>Thanh niên</h3>
@@ -238,7 +239,7 @@
           <p class="ministry__when">Thứ Năm, 6:30 tối<small>Nhóm tại gia mỗi tối thứ Năm</small></p>
           <p class="status">Tạm nghỉ đến tháng Hai</p>
           <p>Xin liên lạc để biết khi nào nhóm sinh hoạt trở lại.</p>
-          <div class="btn-row" style="margin-top:var(--space-2)"><a class="btn btn--ghost" href="mailto:walschurch@gmail.com?subject=Young%20adults">Liên lạc</a></div>
+          <div class="btn-row" style="margin-top:var(--space-2)"><a class="btn btn--ghost" href="#contact" data-topic="Nhóm tại gia thanh niên">Liên lạc</a></div>
         </article>
       </div>
     </div>
@@ -308,6 +309,46 @@
           <p class="handle">@walschurch</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--stone" id="contact">
+    <div class="wrap split">
+      <div>
+        <h2 class="h1">Liên lạc</h2>
+        <p class="lede" style="margin-top:var(--space-5)">Quý vị có thắc mắc về việc đến thăm, nhóm tại gia hay điều gì khác? Xin gửi tin nhắn và hội thánh sẽ liên lạc lại với quý vị.</p>
+        <ul class="contact-list">
+          <li><span>Hoặc liên lạc trực tiếp</span><a href="tel:+17147570172">714-757-0172</a><br><a href="mailto:walschurch@gmail.com">walschurch@gmail.com</a></li>
+        </ul>
+      </div>
+      <form class="form" action="https://formsubmit.co/walschurch@gmail.com" method="POST" data-contact-form>
+        <input type="hidden" name="_subject" value="Tin nhắn mới từ trang web hội thánh">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="" data-next="thanks.html">
+        <input type="hidden" name="language" value="Tiếng Việt">
+        <div class="visually-hidden" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+        <div class="form-row">
+          <div class="field"><label for="c-name">Họ tên</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="c-phone">Điện thoại <small>(không bắt buộc)</small></label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="c-topic">Quý vị muốn hỏi về điều gì?</label>
+            <select id="c-topic" name="topic">
+              <option>Đến thờ phượng Chúa Nhật</option>
+              <option>Nhóm tại gia thiếu niên</option>
+              <option>Nhóm tại gia thanh niên</option>
+              <option>Trại hè</option>
+              <option>Xin cầu nguyện</option>
+              <option>Điều khác</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="c-message">Tin nhắn</label><textarea id="c-message" name="message" required></textarea></div>
+        <button class="btn" type="submit">Gửi tin nhắn</button>
+        <p class="form-note">Tin nhắn sẽ được gửi đến walschurch@gmail.com.</p>
+      </form>
     </div>
   </section>
 
