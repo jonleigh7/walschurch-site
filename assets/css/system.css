@@ -294,6 +294,7 @@ p:last-child { margin-bottom: 0; }
   .list-rows a, .list-rows .row { grid-template-columns: 4fr 6fr 2fr; align-items: baseline; gap: var(--space-6); }
 }
 .list-rows h3 { font-size: var(--step-2); }
+@media (min-width: 800px) { .list-rows .meta { grid-column: -2; } }
 .list-rows .meta { color: var(--clay); }
 @media (min-width: 800px) { .list-rows .meta { text-align: right; } }
 .list-rows a:hover h3 { color: var(--clay); }
