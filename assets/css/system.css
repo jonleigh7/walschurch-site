@@ -283,8 +283,8 @@ p:last-child { margin-bottom: 0; }
 @media (min-width: 800px) { .people-row { grid-template-columns: 1fr 1fr; } }
 .people-row .person { grid-template-columns: 1fr; }
 
-/* Draft marker: visible on purpose while content is being collected */
-.todo { border: 1px dashed var(--clay); color: var(--clay-deep); background: color-mix(in srgb, var(--clay-soft) 40%, transparent); padding: var(--space-3) var(--space-4); font-size: var(--step--1); border-radius: var(--radius); }
+/* Shown in place of content that is not ready yet */
+.coming-soon { font-family: var(--font-display); font-style: italic; font-size: var(--step-1); color: var(--ink-soft); }
 
 /* ---------- Ministries list ---------- */
 .list-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-strong); }
